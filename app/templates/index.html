@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+<!-- Styles block-->
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for ('static',filename='css/index.css')}}">
+{% endblock %}
+<!-- Content block -->
+{% block content %}
+<div class="container">
+<h2>WELCOME TO THE NEWS SOURCE</h2>
+<p>Tap the buttons to choose a news category</p>
+    <p class="text-center">
+    <a class="btn btn-primary btn-lg" href="#generalNews" role="button">General</a>
+    <a class="btn btn-primary btn-lg" href="#businessNews" role="button">Business</a>
+    <a class="btn btn-primary btn-lg" href="#technologyNews" role="button">Technology</a>
+    <a class="btn btn-primary btn-lg" href="#sportsNews" role="button">Sports</a>
+    <a class="btn btn-primary btn-lg" href="#healthNews" role="button">Health</a>
+    <a class="btn btn-primary btn-lg" href="#scienceNews" role="button">Science</a>
+    <a class="btn btn-primary btn-lg" href="#entertainmentNews" role="button">Entertainment</a>
+</p>
+<h3>General news</h3>
+    <ul>
+        {{macro.displaySourceList(general)}}
+    </ul>
+
+<h3>Business News Sources</h3>
+    <ul>
+        {{macro.displaySourceList(business)}}
+    </ul>
+<h3>Technology News Sources</h3>
+    <ul>
+        {{macro.displaySourceList(technology)}}
+    </ul>
+
+<h3>Sports News Sources</h3>
+    <ul>
+      {{macro.displaySourceList(sports)}}
+    </ul>
+<h3>Health News Sources</h3>
+    <ul>
+      {{macro.displaySourceList(health)}}
+    </ul>
+<h3>Science News Sources</h3>
+    <ul>
+      {{macro.displaySourceList(science)}}
+    </ul>
+<h3>Entertainment News Sources</h3>
+    <ul>
+      {{macro.displaySourceList(entertainment)}}
+    </ul>
+</div>
+       
+        
+{% endblock%}
