@@ -20,17 +20,28 @@ To get the ptoject first clone it from github using the following link 'https://
 Create a virtual environment
 Activate the virtual environment
 Install the following dependancies :
-    + click==6.7
-    + dominate==2.3.1
-    + Flask==0.12.2
-    + Flask-Bootstrap==3.3.7.1
-    + Flask-Script==2.0.5
-    + Flask-WTF==0.14.2
-    + gunicorn==19.7.1
-    + itsdangerous==0.24
-    + Jinja2==2.9.6
-    + MarkupSafe==1.0
-    + visitor==0.1.3
-    + Werkzeug==0.12.2
-    + WTForms==2.1
-    + pkg-resources==0.0.0
++ click==6.7
++ dominate==2.3.1
++ Flask==0.12.2
++ Flask-Bootstrap==3.3.7.1
++ Flask-Script==2.0.5
++ Flask-WTF==0.14.2
++ gunicorn==19.7.1
++ itsdangerous==0.24
++ Jinja2==2.9.6
++ MarkupSafe==1.0
++ visitor==0.1.3
++ Werkzeug==0.12.2
++ WTForms==2.1
++ pkg-resources==0.0.0
+
+## Technology Used
+
++ Python3
++ Flask
++ Heroku
+
+## License
+ I have included an MIT license for the project
+
+ Copyright (c) 2018 Jared
