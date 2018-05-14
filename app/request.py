@@ -1,4 +1,4 @@
-import urllib
+import urllib.request
 import json
 from .models import Source
 from .models import Articles
@@ -16,7 +16,7 @@ source_url = None
 def configure_request(app):
     global api_key, base_url, source_url
     api_key = app.config['NEWS_API_KEY']
-    base_url = app.config['BASE_NEW_URL']
+    base_url = app.config['BASE_NEWS_API_URL']
     source_url = app.config['SOURCE_NEWS_URL']
 
 def get_sources(country, category):
@@ -31,7 +31,7 @@ def get_sources(country, category):
         source_results = None
 
         if get_news_response['sources']:
-            source_results_list = get_news_response['source']
+            source_results_list = get_news_response['sources']
             source_results = process_sources(source_results_list)
         
         return source_results

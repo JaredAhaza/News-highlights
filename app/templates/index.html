@@ -8,7 +8,6 @@
 {% endblock %}
 <!-- Content block -->
 {% block content %}
-<div class="container">
 <h2>WELCOME TO THE NEWS SOURCE</h2>
 <p>Tap the buttons to choose a news category</p>
     <p class="text-center">
@@ -20,6 +19,9 @@
     <a class="btn btn-primary btn-lg" href="#scienceNews" role="button">Science</a>
     <a class="btn btn-primary btn-lg" href="#entertainmentNews" role="button">Entertainment</a>
 </p>
+<div>
+    
+</div>
 <h3>General news</h3>
     <ul>
         {{macro.displaySourceList(general)}}
