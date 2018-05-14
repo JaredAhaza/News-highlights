@@ -1,11 +1,15 @@
-{% macro displaySourceList(source_list) %} {% for source in source_list %}
+{% macro displaySourceList(source_list) %} 
+{% for source in source_list %}
 <div class="col-sm-3">
   <a href="/news/{{source.id}}">{{source.name}}</a>
 </div>
-{% endfor %} {% endmacro %} {% macro displayArticleList(articles_list) %} {% for article in articles_list %}
+{% endfor %} 
+{% endmacro %} 
+{% macro displayArticleList(articles_list) %} 
+{% for article in articles_list %}
 <div class="col-md-4">
     <div class="jumbotron">
-      <img class= src="{{article.urlToImage}}">
+      <img src="{{article.urlToImage}}">
       <div class="panel-body">
         <h5 class="panel-title">{{article.title}}</h5>
         <p>{{article.description}}</p>
@@ -16,4 +20,5 @@
       </div>
     </div>
   </div> 
-{% endfor %} {% endmacro %}
+{% endfor %} 
+{% endmacro %}

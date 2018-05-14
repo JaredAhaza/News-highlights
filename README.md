@@ -8,7 +8,7 @@ News Highlight is a web appliction that displays a list of news sources from aro
 
 The user runs ./start.sh on the terminal to launch the server. 
 The user then types the localhost port url on there browser. 
-The user will see a set of buttons which are not fully functional now but are to be devloped later on.
+The user will see a set of buttons that you can tap and will take you to the specific category.
 The user is able to view news by clicking on the sources which will redirect them to the news article
 
 ## Installation

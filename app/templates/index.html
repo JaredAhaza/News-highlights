@@ -1,16 +1,14 @@
-{% extends 'base.html'%}
-{% import 'macros.html' as macro%}
+{% extends 'base.html'%} {% import 'macros.html' as macro%}
 
 <!-- Styles block-->
-{% block styles %}
-{{ super() }}
-<link rel="stylesheet" href="{{url_for ('static',filename='css/index.css')}}">
-{% endblock %}
+{% block styles %} {{ super() }}
+<link rel="stylesheet" href="{{url_for ('static',filename='css/index.css')}}"> {% endblock %}
 <!-- Content block -->
 {% block content %}
+
 <h2>WELCOME TO THE NEWS SOURCE</h2>
 <p>Tap the buttons to choose a news category</p>
-    <p class="text-center">
+<p class="text-center">
     <a class="btn btn-primary btn-lg" href="#generalNews" role="button">General</a>
     <a class="btn btn-primary btn-lg" href="#businessNews" role="button">Business</a>
     <a class="btn btn-primary btn-lg" href="#technologyNews" role="button">Technology</a>
@@ -20,39 +18,65 @@
     <a class="btn btn-primary btn-lg" href="#entertainmentNews" role="button">Entertainment</a>
 </p>
 <div>
-    
-</div>
-<h3>General news</h3>
-    <ul>
-        {{macro.displaySourceList(general)}}
-    </ul>
 
-<h3>Business News Sources</h3>
-    <ul>
-        {{macro.displaySourceList(business)}}
-    </ul>
-<h3>Technology News Sources</h3>
-    <ul>
-        {{macro.displaySourceList(technology)}}
-    </ul>
-
-<h3>Sports News Sources</h3>
-    <ul>
-      {{macro.displaySourceList(sports)}}
-    </ul>
-<h3>Health News Sources</h3>
-    <ul>
-      {{macro.displaySourceList(health)}}
-    </ul>
-<h3>Science News Sources</h3>
-    <ul>
-      {{macro.displaySourceList(science)}}
-    </ul>
-<h3>Entertainment News Sources</h3>
-    <ul>
-      {{macro.displaySourceList(entertainment)}}
-    </ul>
 </div>
-       
-        
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div id="generalNews">
+                <h3>General news</h3>
+                <ul>
+                    {{macro.displaySourceList(general)}}
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="businessNews"></div>
+            <h3>Business News Sources</h3>
+            <ul>
+                {{macro.displaySourceList(business)}}
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <div id="technologyNews">
+                <h3>Technology News Sources</h3>
+                <ul>
+                    {{macro.displaySourceList(technology)}}
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="sportsNews">
+                <h3>Sports News Sources</h3>
+                <ul>
+                    {{macro.displaySourceList(sports)}}
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="healthNews">
+                <h3>Health News Sources</h3>
+                <ul>
+                    {{macro.displaySourceList(health)}}
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="scienceNews">
+                <h3>Science News Sources</h3>
+                <ul>
+                    {{macro.displaySourceList(science)}}
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+                <div id="entertainmentNews">
+                    <h3>Entertainment News Sources</h3>
+                    <ul>
+                        {{macro.displaySourceList(entertainment)}}
+                    </ul>
+                </div>
+            </div>
+    </div>
+</div>
 {% endblock%}
