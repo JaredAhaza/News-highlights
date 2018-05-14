@@ -1,3 +1,3 @@
-export NEWS_API_KEY=736c337caab0447fb0ee021cbc509aa8
+export NEWS_API_KEY=" INSERT API KEY"
 
 python3 manage.py server
